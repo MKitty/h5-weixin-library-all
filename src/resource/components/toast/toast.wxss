@@ -1,0 +1,45 @@
+/*按钮*/  
+.btn222 {  
+  font-size: 28rpx;  
+  padding: 15rpx 30rpx;  
+  width: 100rpx;  
+  margin: 20rpx;  
+  text-align: center;  
+  border-radius: 10rpx;  
+  border: 1px solid #000;  
+}  
+/*mask*/  
+.toast_mask {  
+  opacity: 0;  
+  width: 100%;  
+  height: 100%;  
+  overflow: hidden;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 888;  
+}  
+/*toast*/  
+.toast_content_box {  
+  display: flex;  
+  width: 100%;  
+  height: 100%;  
+  justify-content: center;  
+  align-items: center;  
+  position: fixed;  
+  z-index: 999;  
+}  
+.toast_content {  
+  width: 50%;  
+  padding: 20rpx;  
+  background: rgba(0, 0, 0, 0.8);  
+  border-radius: 20rpx;  
+  z-index:10000;
+}  
+.toast_content_text {  
+  height: 100%;  
+  width: 100%;  
+  color: #fff;  
+  font-size: 28rpx;  
+  text-align: center;  
+}  

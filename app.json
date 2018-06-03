@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "src/page/home/index",
+    "src/page/user/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor":"#000",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "#fff",
+    "navigationBarTitleText": "图书馆座位预约",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+   "tabBar": {
+    "color": "#333",
+    "selectedColor": "#fa5305",
+    "borderStyle": "black",
+    "backgroundColor": "#f4f4f4",
+    "list": [
+      {
+        "pagePath": "src/page/home/index",
+        "iconPath": "src/resource/images/tabbarIcon/home.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "src/page/home/index",
+        "iconPath": "src/resource/images/tabbarIcon/publish.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/publish-active.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "src/page/home/index",
+        "iconPath": "src/resource/images/tabbarIcon/plus1.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/plus-active1.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "src/page/user/index/index",
+        "iconPath": "src/resource/images/tabbarIcon/head.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/head_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}
