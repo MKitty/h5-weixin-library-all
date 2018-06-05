@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="container-home">
+        <!-- 轮播图 -->
+        <view class="swiper-contain">
+        	<swiper 
+        		class="swiper" 
+        		indicator-dots="true" 
+        		autoplay="true" 
+        		interval="3000" 
+        		duration="1000"
+    		>    
+    	        <block wx:for="{{advs}}" wx:key="unique">    
+    		        <swiper-item>    
+    		            <image 
+                            src="{{item}}" class="slide-image image_pic" 
+                            mode="aspectFill"
+                        /> 
+    		        </swiper-item>    
+    	        </block> 
+    	    </swiper>
+            <view class="swiper-btn">
+                <view class="scan-box" bindtap="scanCode">
+                    <i class="iconfont icon-scanqcord"></i>扫一扫
+                </view>
+            </view>
+        </view>
+
+        <view class="order-link-contain">
+            <view class="space item">
+                <image 
+                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    mode="aspectFill"
+                    class="img"
+                />
+                <view class="text">空间预约</view>
+            </view>
+            <view class="seat item">
+                <image 
+                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    mode="aspectFill"
+                    class="img"
+                />
+                <view class="text">座位预约</view>
+            </view>
+            <view class="lecture item">
+                <image 
+                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    mode="aspectFill"
+                    class="img"
+                />
+                <view class="text">讲座预约</view>
+            </view>
+        </view>
+    </view>
+</view>

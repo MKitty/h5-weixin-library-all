@@ -1,0 +1,52 @@
+page{
+	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	font-family: PingFangSC-Regular;
+}
+.container-home{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/*轮播图*/
+.swiper-contain{
+	width: 100%;
+	position: relative;
+}
+.swiper {
+	height: 300rpx;
+	width: 100%;
+}
+.swiper image {
+	height: 100%;
+	width: 100%;
+}
+.swiper-btn{
+	position: absolute;
+	top: 15rpx;
+	display: flex;
+	right: 30rpx;
+	font-size: 12pt;
+}
+.swiper-btn .iconfont{
+	font-size: 18pt;
+	color: rgba(0,0,0,0.5);
+	vertical-align: -7%;
+	margin-right: 3rpx;
+}
+
+/*订单链接*/
+.order-link-contain{
+	display: flex;
+}
+.order-link-contain .item{
+	width: 33.33%;
+	height: 210rpx;
+	text-align: center;
+}
+.order-link-contain .item .img{
+	width: 63rpx;
+	height: 63rpx;
+}

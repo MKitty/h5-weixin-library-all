@@ -1,4 +1,4 @@
-import { Base } from '../../resource/utils/base.js'
+import { Base } from '../../../resource/utils/base.js'
 const app = getApp()
 class Index extends Base {
   constructor() {
