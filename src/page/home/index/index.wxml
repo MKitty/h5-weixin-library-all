@@ -52,5 +52,28 @@
                 <view class="text">讲座预约</view>
             </view>
         </view>
+
+        <view class="notice-contain">
+            <view class="title">公告</view>
+            <view class="list">
+                <view class="item" wx:for="{{noticeList}}" wx:key="{{index}}" data-item='{{item}}'>
+                    {{item.content}}
+                </view>
+            </view>
+        </view>
+
+        <view class="order-contain">
+            <view class="title">今日使用</view>
+            <view class="list">
+                <view class="item" wx:for="{{orderList}}" wx:key="{{index}}" data-item='{{item}}'>
+                    <view class="content">
+                        <view class="text">{{item.content}}</view>
+                        <view class="status">已生效</view>
+                    </view>
+                    <view class="time">{{item.time}}</view>
+                </view>
+                <view class="no-more">没有更多了</view>
+            </view>
+        </view>
     </view>
 </view>

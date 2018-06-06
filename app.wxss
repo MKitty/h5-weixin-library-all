@@ -3,12 +3,12 @@
 /**app.wxss**/
 
 @font-face {
-  font-family: 'iconfont';  /* project id 530216 */
-  src: url('//at.alicdn.com/t/font_530216_lqv5zgpfapx03sor.eot');
-  src: url('//at.alicdn.com/t/font_530216_lqv5zgpfapx03sor.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_530216_lqv5zgpfapx03sor.woff') format('woff'),
-  url('//at.alicdn.com/t/font_530216_lqv5zgpfapx03sor.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_530216_lqv5zgpfapx03sor.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 697305 */
+  src: url('//at.alicdn.com/t/font_697305_wd7eg4pv5hw4gqfr.eot');
+  src: url('//at.alicdn.com/t/font_697305_wd7eg4pv5hw4gqfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_697305_wd7eg4pv5hw4gqfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_697305_wd7eg4pv5hw4gqfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_697305_wd7eg4pv5hw4gqfr.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -19,92 +19,17 @@
 }
 
 /*本项目使用的18个图标  */
-.icon-down-single:before{content: '\e600';}
-.icon-down-double:before{content: '\e602';}
-.icon-up-double:before{content: '\e604';}
-.icon-down-solid:before{content: '\e662';}
-.icon-up-solid:before{content: '\e661';}
-.icon-right:before{content: '\e61e';}
-
-.icon-plus:before{content: '\e73e';}
-.icon-plus-circle:before{content: '\e61b';}
-.icon-plus-circle2:before{content: '\e617';}
-.icon-plus-circle-bg:before{content: '\e65b';}
-
-.icon-close:before{content: '\e68d';}
-
-.icon-search:before{content: '\e64c';}
-.icon-search2:before{content: '\e601';}
-
-.icon-scanqcord:before{content: '\e61f';}
-
-.icon-adress:before{content: '\e60e';}
-.icon-adress-solid:before{content: '\e647';}
-
-.icon-tel-right:before{content: '\e620';}
-.icon-tel-left:before{content: '\e652';}
-
-.icon-share:before{content: '\e60f';}
-.icon-share2:before{content: '\e612';}
-
-.icon-alipay:before{content: '\e65c';}
-.icon-weixinpay:before{content: '\e6f4';}
-.icon-wifi:before{content: '\e63e';}
-.icon-stop:before{content: '\e67f';}
-
-.icon-edit:before{content: '\e60b';}
-
-.icon-city:before{content: '\e65e';}
-.icon-coupon:before{content: '\e613';}
-.icon-coupon2:before{content: '\e63f';}
-.icon-publish:before{content: '\e62a';}
-.icon-store:before{content: '\e632';}
-.icon-star:before{content: '\e66e';}
-.icon-home:before{content: '\e603';}
-.icon-home-active:before{content: '\e62b';}
-.icon-head:before{content: '\e667';}
-.icon-head-active:before{content: '\e61d';}
-
-.icon-msg:before{content: '\e687';}
-.icon-msg-solid:before{content: '\e6c2';}
-.icon-msg-solid2:before{content: '\e7a7';}
-
-.icon-compass:before{content: '\e605';}
-.icon-compass-active:before{content: '\e746';}
-
-.icon-movie:before{content: '\e60a';}
-.icon-classify:before{content: '\e614';}
-.icon-food:before{content: '\e658';}
-.icon-car:before{content: '\e7f7';}
-.icon-tshirt:before{content: '\e60c';}
-.icon-hotel:before{content: '\e64d';}
-.icon-country:before{content: '\e618';}
-.icon-sofa:before{content: '\e654';}
-.icon-fruit:before{content: '\e815';}
-.icon-camera:before{content: '\e650';}
-.icon-cup:before{content: '\e608';}
-.icon-board:before{content: '\e718';}
-.icon-fridge:before{content: '\e607';}
-.icon-money:before{content: '\e609';}
-.icon-medicine:before{content: '\e606';}
-
-.icon-del:before{content: '\e690';}
-
-.icon-shop:before{content: '\e61c';}
-.icon-note:before{content: '\e6cc';}
-.icon-clock:before{content: '\e7eb';}
-
-.icon-scan:before{content: '\e611';}
-.icon-collect-solid:before{content: '\e675';}
-.icon-collect:before{content: '\e615';}
-.icon-comment:before{content: '\e619';}
-
-.icon-star0:before{content: '\e723';}
-.icon-star1:before{content: '\e6c9';}
-.icon-star2:before{content: '\e659';}
-
-.icon-notice:before{content: '\e637';}
-
+.icon-right:before{content: '\e605';}
+.icon-lock:before{content: '\e788';}
+.icon-money:before{content: '\e61f';}
+.icon-qrcode:before{content: '\e601';}
+.icon-notice:before{content: '\e62d';}
+.icon-crown:before{content: '\e63d';}
+.icon-source:before{content: '\e600';}
+.icon-reset:before{content: '\e6e9';}
+.icon-wechat:before{content: '\e60e';}
+.icon-change:before{content: '\e60d';}
+.icon-headset:before{content: '\e62f';}
 
 .col999 {
   color: #999;

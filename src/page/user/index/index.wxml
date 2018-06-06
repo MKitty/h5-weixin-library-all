@@ -1,35 +1,78 @@
 <view class='my'>
-    <view class='top'>
-		<image src="{{avatar ? avatar : '../../resource/images/user-default.png'}}" class='avatar'></image>
-		<view class='name'>{{name}}</view>
+    <!-- 顶部 -->
+    <view class="top">
+        <view class="user">
+            <image 
+                src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}" class="headImg" 
+                mode="aspectFill"
+            /> 
+            <view class="msg">
+                <view class="userName">姓名：{{info.name}}</view>
+                <view class="count">账号：{{info.count}}</view>
+            </view>
+            <i class="iconfont icon-right"></i>
+        </view>
+
+        <view class="tag-list">
+            <view class="item" wx:for="{{tagList}}" wx:key="{{index}}" data-item='{{item}}'>
+                {{item}}
+            </view>
+        </view>
     </view>
 
-    <view class='itemTitle {{city == true ? "" : "hide"}}' bindtap="onTitleTap" data-name='city'>
-		<i class="iconfont icon-city"></i>同城
-	</view>
+    <view class="icon-list first">
+        <view class="icon-item">
+            <i class="iconfont icon-money"></i>
+            <view class="text">我的学币</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-qrcode"></i>
+            <view class="text">我的预约码</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-notice"></i>
+            <view class="text">公告提醒</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-crown"></i>
+            <view class="text">我的权限</view>
+        </view>
+    </view>
 
-    <view hidden="{{!city}}">
-    	<view class='item' bindtap='go' data-type="coupon">
-	    	<i class="iconfont icon-coupon"></i>
-	    	我的优惠券
-    	</view>
-    	<view class='item' bindtap='go' data-type="publish">
-	    	<i class="iconfont icon-publish"></i>
-	    	我的发布
-    	</view>
-    <!--
-    	<view class='item' bindtap='go' data-type="msg">
-    		<i class="iconfont icon-msg-solid"></i>
-	    	我的消息
-    	</view>
-    -->
-    	<view class='item' bindtap='go' data-type="collect">
-    		<i class="iconfont icon-star"></i>
-		    我的收藏
-		</view>
-    	<view class='item' bindtap='go' data-type="moveIn">
-    		<i class="iconfont icon-store"></i>
-	    	我的入驻
-    	</view>
-	</view>
+    <view class="title">安全设置</view>
+    <view class="icon-list second">
+        <view class="icon-item">
+            <i class="iconfont icon-lock"></i>
+            <view class="text">修改密码</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-reset"></i>
+            <view class="text">恢复初始密码</view>
+        </view>
+    </view>
+
+    <view class="title">账号管理</view>
+    <view class="icon-list second">
+        <view class="icon-item">
+            <i class="iconfont icon-wechat"></i>
+            <view class="text">微信绑定</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-change"></i>
+            <view class="text">切换账号</view>
+        </view>
+        <view class="icon-item">
+            <i class="iconfont icon-source"></i>
+            <view class="text">退出登录</view>
+        </view>
+    </view>
+    
+    <view class="title">预约管理平台</view>
+    <view class="icon-list second">
+        <view class="icon-item">
+            <i class="iconfont icon-headset"></i>
+            <view class="text">客服</view>
+        </view>
+    </view>
+    
 </view>

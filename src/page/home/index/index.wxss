@@ -40,6 +40,7 @@ page{
 /*订单链接*/
 .order-link-contain{
 	display: flex;
+	margin-top: 15rpx;
 }
 .order-link-contain .item{
 	width: 33.33%;
@@ -49,4 +50,95 @@ page{
 .order-link-contain .item .img{
 	width: 63rpx;
 	height: 63rpx;
+	margin: 55rpx 0 15rpx 0;
+}
+.order-link-contain .item .text{
+	font-size: 24rpx;
+	color: #fff;
+}
+.order-link-contain .space{
+	background-color: #3d667a;
+}
+.order-link-contain .seat{
+	background-color: #c6bb9d;
+	color: #4b4b4b;
+}
+.order-link-contain .lecture{
+	background-color: #fcd667;
+	color: #2f586c;
+}
+
+/*公告*/
+.notice-contain{
+	margin: 41rpx 0 34rpx 0;
+	padding: 0 24rpx;
+	color: #4b4b4b;
+}
+.notice-contain .title{
+	text-align: center;
+	font-size: 30rpx;
+	margin-bottom: 34rpx;
+}
+.notice-contain .list{
+	padding: 24rpx 30rpx;
+	font-size: 25rpx;
+	line-height: 32rpx;
+	border: .5rpx solid #c6c6c6;
+	border-radius: 15rpx;
+}
+.notice-contain .list .item{
+	margin-bottom: 30rpx;
+}
+.notice-contain .list .item:last-child{
+	margin-bottom: 0;
+}
+
+/*预约订单列表*/
+.order-contain{
+	padding: 0 24rpx;
+	font-size: 30rpx;
+	color: #4b4b4b;
+}
+.order-contain .title{
+	position: relative;
+	text-align: center;
+	width: 170rpx;
+	border-bottom: 1rpx solid #4b4b4b;
+	height: 50rpx;
+	line-height: 50rpx;
+	margin: 0 auto 21rpx;
+	font-size: 30rpx;
+}
+.order-contain .item{
+	padding: 14rpx 34rpx;
+}
+.order-contain .item:nth-child(2n+1){
+	background-color: #eaf2f6;
+}
+.order-contain .item .content{
+	display: flex;
+	justify-content: space-between;
+	font-size: 24rpx;
+}
+.order-contain .item .time{
+	font-size: 22rpx;
+	color: #979797;
+	margin-top: 8rpx;
+}
+
+/*没有更多了*/
+.order-contain .no-more{
+	position: relative;
+	color: #cdcdcd;
+	margin: 24rpx 0 64rpx;
+	font-size: 24rpx;
+	text-align: center;
+	font-weight: 300;
+}
+.order-contain .no-more:before{
+	content: '';
+	display: inline-block;
+	height: 129rpx;
+	height: 2rpx;
+	background: #cdcdcd;
 }

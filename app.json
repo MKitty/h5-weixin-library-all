@@ -1,20 +1,20 @@
 {
   "pages": [
+    "src/page/user/index/index",
     "src/page/home/index/index",
     "src/page/order/remind/index",
     "src/page/order/history/index",
-    "src/page/user/index/index",
+    "src/page/user/msg/index",
     "src/page/order/create/index",
     "src/page/user/custormService/index",
-    "src/page/user/msg/index",
     "src/page/home/login/index",
     "src/page/home/password/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "backgroundColor":"#000",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTextStyle": "#fff",
+    "backgroundColor":"#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "图书馆座位预约",
     "enablePullDownRefresh": true
   },
@@ -26,32 +26,32 @@
   },
    "tabBar": {
     "color": "#333",
-    "selectedColor": "#fa5305",
+    "selectedColor": "#3d667a",
     "borderStyle": "black",
     "backgroundColor": "#f4f4f4",
     "list": [
       {
         "pagePath": "src/page/home/index/index",
         "iconPath": "src/resource/images/tabbarIcon/home.png",
-        "selectedIconPath": "src/resource/images/tabbarIcon/home_active.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/home-active.png",
         "text": "首页"
       },
       {
         "pagePath": "src/page/order/remind/index",
-        "iconPath": "src/resource/images/tabbarIcon/publish.png",
-        "selectedIconPath": "src/resource/images/tabbarIcon/publish-active.png",
+        "iconPath": "src/resource/images/tabbarIcon/message.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/message-active.png",
         "text": "消息提醒"
       },
       {
         "pagePath": "src/page/order/history/index",
-        "iconPath": "src/resource/images/tabbarIcon/plus1.png",
-        "selectedIconPath": "src/resource/images/tabbarIcon/plus-active1.png",
+        "iconPath": "src/resource/images/tabbarIcon/myreser.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/myreser-active.png",
         "text": "我的预约"
       },
       {
         "pagePath": "src/page/user/index/index",
         "iconPath": "src/resource/images/tabbarIcon/head.png",
-        "selectedIconPath": "src/resource/images/tabbarIcon/head_active.png",
+        "selectedIconPath": "src/resource/images/tabbarIcon/head-active.png",
         "text": "个人"
       }
     ]

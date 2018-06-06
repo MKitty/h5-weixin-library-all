@@ -1,8 +1,8 @@
 {
-  "navigationBarBackgroundColor": "#000",
-  "navigationBarTextStyle": "#fff",
-  "navigationBarTitleText": "我的",
-  "backgroundColor": "#000",
-  "backgroundTextStyle": "light",
-  "enablePullDownRefresh": false
+    "backgroundTextStyle": "light",
+    "backgroundColor":"#fff",
+    "navigationBarBackgroundColor": "#3d667a",
+    "navigationBarTextStyle": "light",
+    "navigationBarTitleText": "个人",
+    "enablePullDownRefresh": false
 }

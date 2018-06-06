@@ -1,96 +1,114 @@
 page{
     background-color: #f4f4f4
 }
+/*顶部*/
 .top{
-    background-color: #fff;
-    padding: 20rpx 30rpx;
-    font-size: 0;
+    padding: 48rpx 24rpx;
+    background-color: #3d667a;
+}
+.top .user{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 30rpx;
+    position: relative;
+}
+.top .user .headImg{
+    height: 120rpx;
+    width: 120rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+.top .user .msg{
+    flex: 1;
+}
+.top .user .msg .userName{
+    margin: 20rpx 0 10rpx 0;
+}
+.top .user .iconfont{
+    position: absolute;
+    right: 20rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 55rpx;
+    color: #fff;
+}
+
+.tag-list{
+    padding: 0 18rpx;
+    display: flex;
+    margin-top: 45rpx;
+}
+.tag-list .item{
+    height: 40rpx;
+    line-height: 40rpx;
+    width: 120rpx;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    margin-right: 20rpx;
+    font-size: 24rpx;
+}
+
+.icon-list{
+    display: flex;
+    color: #4b4b4b;
+    font-size: 24rpx;
+    background: #fff;
     margin-bottom: 20rpx;
 }
-.top .avatar{
-    width: 120rpx;
-    height: 120rpx;
-    border-radius: 50%;
-    display: inline-block;
-    vertical-align: top;
+.icon-list:last-child{
+    margin-bottom: 0;
 }
-.top .name{
-    display: inline-block;
-    font-size: 32rpx;
-    padding-left: 40rpx;
-    line-height: 120rpx
+.icon-list .iconfont{
+    font-size: 54rpx;
+    color: #4b4b4b;
 }
-
-.item,.itemTitle{
-    padding: 20rpx;
-    line-height: 60rpx;
-    height: 60rpx;
-    font-size: 32rpx;
-    padding-left: 80rpx;
-    background-color: #fff;
-    border-bottom: 1rpx solid #eee;
-    position: relative;
-    color: #666;
+.icon-list .icon-item{
+    width: 25%;
+    text-align: center;
+    padding: 32rpx 0 19rpx;
 }
-.itemTitle{
-    padding-left: 30rpx;
-    color: #222;
-    font-weight: 700
-}
-.itemTitle:after{
-    content: '';
-    position: absolute;
-    top: 38rpx;
-    width: 16rpx;
-    height: 16rpx;
-    border-right: 2rpx solid #777;
-    border-top: 2rpx solid #777;
-    transform: rotate(135deg);
-    right: 40rpx;
-    transition: transform .2s;
-}
-.itemTitle.hide:after{
-    transform: rotate(45deg);
+.icon-list .icon-item .text{
+    margin-top: 30rpx;
 }
 
-.item{
-    padding-left: 40rpx;
+.title{
+    background: #fff;
+    font-size: 24rpx;
+    height: 58rpx;
+    line-height: 58rpx;
+    padding-left: 24rpx;
+    color: #4b4b4b;
+    margin-bottom: -10rpx;
 }
-.item:last-child{
-    border-bottom: none;
+.icon-list .icon-money{
+    color: #c23030;
 }
-.item:after{
-    content: '';
-    position: absolute;
-    right: 40rpx;
-    top: 38rpx;
-    width: 16rpx;
-    height: 16rpx;
-    border-right: 2rpx solid #777;
-    border-top: 2rpx solid #777;
-    transform: rotate(45deg)
+.icon-list .icon-qrcode{
+    color: #333;
 }
-
-.iconfont{
-	font-size:15pt;
-	margin-right:13rpx;
-	vertical-align:-6%;
+.icon-list .icon-notice{
+    color: #255591;
 }
-.icon-city{
-	color:#40E0D0;
+.icon-list .icon-crown{
+    color: #e7991e;
 }
-.icon-store{
-	color: #0000CD;
+.icon-list .icon-lock{
+    color: #552b8f;
 }
-.icon-star{
-	color: red;
+.icon-list .icon-reset{
+    color: #599cbc;
 }
-.icon-msg-solid{
-	color: #4169E1;
+.icon-list .icon-wechat{
+    color: #339629;
 }
-.icon-publish{
-	color: #32CD32;
+.icon-list .icon-change{
+    color: #2d4b77;
 }
-.icon-coupon{
-	color: #FF6347;
+.icon-list .icon-source{
+    color: #207277;
+}
+.icon-list .icon-headset{
+    color: #33708d;
 }
