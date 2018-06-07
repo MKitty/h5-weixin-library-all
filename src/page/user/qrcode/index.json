@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#3d667a",
+  "navigationBarTextStyle": "#fff",
+  "navigationBarTitleText": "我的预约码",
+  "backgroundColor": "#000",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false
+}

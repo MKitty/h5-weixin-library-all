@@ -1,0 +1,22 @@
+page{
+    background-color: #3d667a;
+}
+
+.img-box{
+	width: 472rpx;
+	height: 527rpx;
+	background: #fff;
+	margin: 270rpx auto 0;
+	text-align: center;
+}
+
+.img{
+	width: 352rpx;
+	height: 352rpx;
+	margin-top: 49rpx;
+}
+.text{
+	margin-top: 50rpx;
+	font-size: 30rpx;
+	color: #4b4b4b;
+}

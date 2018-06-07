@@ -125,20 +125,3 @@ page{
 	color: #979797;
 	margin-top: 8rpx;
 }
-
-/*没有更多了*/
-.order-contain .no-more{
-	position: relative;
-	color: #cdcdcd;
-	margin: 24rpx 0 64rpx;
-	font-size: 24rpx;
-	text-align: center;
-	font-weight: 300;
-}
-.order-contain .no-more:before{
-	content: '';
-	display: inline-block;
-	height: 129rpx;
-	height: 2rpx;
-	background: #cdcdcd;
-}

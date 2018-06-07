@@ -1,0 +1,25 @@
+page{
+    background-color: #fff;
+}
+
+.auth{
+    border-top: 1rpx solid #3d667a;
+}
+
+.item{
+    display: flex;
+    font-size: 28rpx;
+    padding-left: 23rpx;
+    color: #535353;
+    margin-bottom: 10rpx;
+}
+.item:first-child{
+    color: #252525;
+    margin-top: 37rpx;
+}
+.item:nth-child(2){
+    color: #dc2121;
+}
+.item:last-child{
+    color: #e0c788;
+}

@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+    修改密码
+</view>

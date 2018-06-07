@@ -1,0 +1,24 @@
+page{
+    background-color: #fff;
+}
+.noticeDetail{
+    border-top: 1rpx solid #3d667a;
+}
+.title-contain{
+	padding: 27rpx 24rpx 20rpx 24rpx;
+	border-bottom: .5rpx dotted #dedede;
+}
+.title{
+	font-size: 30rpx;
+	color: #252525;
+	margin-bottom: 10rpx;
+}
+.time{
+	font-size: 24rpx;
+	color: #9f9f9f;
+}
+.content{
+	padding: 25rpx 24rpx;
+	font-size: 28rpx;
+	color: #4b4b4b;
+}

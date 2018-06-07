@@ -1,0 +1,10 @@
+<view class='qrcode'>
+    <view class='img-box'>
+    	<image 
+	        src="{{'http://xxb.xuexunbao.com.cn/201806062227018863cfc5b771da58f0ae5acd19064476b22.jpg'}}"
+	        mode="aspectFill"
+	        class="img"
+	    /> 
+	    <view class="text">扫一扫，签到打卡，领取积分</view>
+    </view>
+</view>

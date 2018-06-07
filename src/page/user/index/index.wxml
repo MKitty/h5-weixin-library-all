@@ -21,19 +21,19 @@
     </view>
 
     <view class="icon-list first">
-        <view class="icon-item">
+        <view class="icon-item" bindtap="goToMyMoney">
             <i class="iconfont icon-money"></i>
             <view class="text">我的学币</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="goToMyQrcode">
             <i class="iconfont icon-qrcode"></i>
             <view class="text">我的预约码</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="goToNotice">
             <i class="iconfont icon-notice"></i>
             <view class="text">公告提醒</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="goToMyAuth">
             <i class="iconfont icon-crown"></i>
             <view class="text">我的权限</view>
         </view>
@@ -41,11 +41,11 @@
 
     <view class="title">安全设置</view>
     <view class="icon-list second">
-        <view class="icon-item">
+        <view class="icon-item" bindtap="changePassword">
             <i class="iconfont icon-lock"></i>
             <view class="text">修改密码</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="resetPassword">
             <i class="iconfont icon-reset"></i>
             <view class="text">恢复初始密码</view>
         </view>
@@ -53,15 +53,15 @@
 
     <view class="title">账号管理</view>
     <view class="icon-list second">
-        <view class="icon-item">
+        <view class="icon-item" bindtap="bindWechat">
             <i class="iconfont icon-wechat"></i>
             <view class="text">微信绑定</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="changeCount">
             <i class="iconfont icon-change"></i>
             <view class="text">切换账号</view>
         </view>
-        <view class="icon-item">
+        <view class="icon-item" bindtap="loginOut">
             <i class="iconfont icon-source"></i>
             <view class="text">退出登录</view>
         </view>
@@ -69,7 +69,7 @@
     
     <view class="title">预约管理平台</view>
     <view class="icon-list second">
-        <view class="icon-item">
+        <view class="icon-item" bindtap="goToServicer">
             <i class="iconfont icon-headset"></i>
             <view class="text">客服</view>
         </view>

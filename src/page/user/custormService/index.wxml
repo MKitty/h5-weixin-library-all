@@ -1,35 +1,3 @@
 <view class='my'>
-    <view class='top'>
-		<image src="{{avatar ? avatar : '../../resource/images/user-default.png'}}" class='avatar'></image>
-		<view class='name'>{{name}}</view>
-    </view>
-
-    <view class='itemTitle {{city == true ? "" : "hide"}}' bindtap="onTitleTap" data-name='city'>
-		<i class="iconfont icon-city"></i>同城
-	</view>
-
-    <view hidden="{{!city}}">
-    	<view class='item' bindtap='go' data-type="coupon">
-	    	<i class="iconfont icon-coupon"></i>
-	    	我的优惠券
-    	</view>
-    	<view class='item' bindtap='go' data-type="publish">
-	    	<i class="iconfont icon-publish"></i>
-	    	我的发布
-    	</view>
-    <!--
-    	<view class='item' bindtap='go' data-type="msg">
-    		<i class="iconfont icon-msg-solid"></i>
-	    	我的消息
-    	</view>
-    -->
-    	<view class='item' bindtap='go' data-type="collect">
-    		<i class="iconfont icon-star"></i>
-		    我的收藏
-		</view>
-    	<view class='item' bindtap='go' data-type="moveIn">
-    		<i class="iconfont icon-store"></i>
-	    	我的入驻
-    	</view>
-	</view>
+    <view>客服</view>
 </view>

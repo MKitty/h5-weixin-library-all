@@ -1,0 +1,23 @@
+<view class='my'>
+    <view class="top">
+        <image 
+            src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}" class="headImg" 
+            mode="aspectFill"
+        /> 
+        <view class="name">{{info.name}}</view>
+        <view class="count">{{info.count+'学币'}}</view>
+        <view class="btn">签到</view>
+    </view>
+
+    <view class="list">
+        <view class="title">学币记录</view>
+        <view class="item" wx:for="{{scoreList}}" wx:key="{{index}}" data-item='{{item}}'>
+            <view class="content">
+                <view class="text">{{item.title}}</view>
+                <view class="score">{{item.score}}</view>
+            </view>
+            <view class="time">{{item.time}}</view>
+        </view>
+        <view class="no-more">没有更多了</view>
+    </view>
+</view>
