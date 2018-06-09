@@ -1,3 +1,52 @@
 page{
-    background-color: #f4f4f4
+    background-color: #f7f7f7;
+}
+.myOrder{
+	padding-top: 20rpx;
+	border-top: 0.5rpx solid #3d667a;
+}
+
+.item{
+	padding: 25rpx 24rpx 0 24rpx;
+	background: #fff;
+	text-align: center;
+	font-size: 24rpx;
+}
+
+.title{
+	height: 56rpx;
+	line-height: 56rpx;
+	width: 140rpx;
+	color: #fff;
+	border-radius: 5px 27px 27px 10px;
+	margin-bottom: 29rpx;
+}
+
+.item:first-child .title{
+	background-color: #76a5bd;
+}
+.item:nth-child(2) .title{
+	background-color: #e0c788;
+}
+.item:last-child .title{
+	background-color: #e09a88;
+}
+
+.item-content{
+	display: flex;
+	border-bottom: 0.5rpx solid #ddd;
+	padding-bottom: 24rpx;
+}
+
+.item:last-child .item-content{
+	border-bottom: none;
+}
+.item-detail{
+	width: 25%;
+	color: #535353;
+}
+
+.img{
+	width: 40rpx;
+	height: 40rpx;
 }

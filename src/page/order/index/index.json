@@ -1,7 +1,8 @@
 {
-	"backgroundTextStyle": "light",
+    "backgroundTextStyle": "light",
     "backgroundColor":"#fff",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "我的预约"
-}
+    "navigationBarTitleText": "我的预约",
+    "enablePullDownRefresh": false
+  }

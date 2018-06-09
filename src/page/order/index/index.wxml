@@ -1,3 +1,103 @@
-<view class='my'>
-    我的预约
+<view class='myOrder'>
+	<view class="item">
+		<view class="title">当前预约</view>
+		<view class="item-content">
+			<view class="item-detail" bindtap="goToDetail" data-type="1" data-status="1">
+				<image 
+	                src="../../../resource/images/lock1.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">所有预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="1" data-status="2">
+				<image 
+	                src="../../../resource/images/seat1.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">座位预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="1" data-status="3">
+				<image 
+	                src="../../../resource/images/space1.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">空间预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="1" data-status="4">
+				<image 
+	                src="../../../resource/images/chair1.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">讲座预约</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="item">
+		<view class="title">历史预约</view>
+		<view class="item-content">
+			<view class="item-detail" bindtap="goToDetail" data-type="2" data-status="1">
+				<image 
+	                src="../../../resource/images/lock2.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">所有预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="2" data-status="2">
+				<image 
+	                src="../../../resource/images/seat2.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">座位预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="2" data-status="3">
+				<image 
+	                src="../../../resource/images/space2.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">空间预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="2" data-status="4">
+				<image 
+	                src="../../../resource/images/chair2.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">讲座预约</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="item">
+		<view class="title">违纪预约</view>
+		<view class="item-content">
+			<view class="item-detail" bindtap="goToDetail" data-type="3" data-status="1">
+				<image 
+	                src="../../../resource/images/lock3.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">所有预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="3" data-status="2">
+				<image 
+	                src="../../../resource/images/seat3.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">座位预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="3" data-status="3">
+				<image 
+	                src="../../../resource/images/space3.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">空间预约</view>
+			</view>
+			<view class="item-detail" bindtap="goToDetail" data-type="3" data-status="4">
+				<image 
+	                src="../../../resource/images/chair3.png" class="img" 
+	                mode="aspectFill"
+	            /> 
+	            <view class="item-text">讲座预约</view>
+			</view>
+		</view>
+	</view>
 </view>

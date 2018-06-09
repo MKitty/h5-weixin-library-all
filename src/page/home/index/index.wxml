@@ -59,6 +59,10 @@
                 <view class="item" wx:for="{{noticeList}}" wx:key="{{index}}" data-item='{{item}}'>
                     {{item.content}}
                 </view>
+                <view class="border1 list-border"></view>
+                <view class="border2 list-border"></view>
+                <view class="border3 list-border"></view>
+                <view class="border4 list-border"></view>
             </view>
         </view>
 

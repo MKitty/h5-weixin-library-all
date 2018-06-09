@@ -83,9 +83,41 @@ page{
 	padding: 24rpx 30rpx;
 	font-size: 25rpx;
 	line-height: 32rpx;
-	border: .5rpx solid #c6c6c6;
-	border-radius: 15rpx;
+	position: relative;
 }
+
+.list-border{
+	position: absolute;
+	height: 31rpx;
+	width: 31rpx;
+	border-radius: 5rpx;
+}
+
+.border1{
+	left: 0;
+	top: 0;
+	border-left: 0.5rpx solid #c6c6c6;
+	border-top: 0.5rpx solid #c6c6c6;
+}
+.border2{
+	right: 0;
+	top: 0;
+	border-right: 0.5rpx solid #c6c6c6;
+	border-top: 0.5rpx solid #c6c6c6;
+}
+.border3{
+	right: 0;
+	bottom: 0;
+	border-right: 0.5rpx solid #c6c6c6;
+	border-bottom: 0.5rpx solid #c6c6c6;
+}
+.border4{
+	left: 0;
+	bottom: 0;
+	border-left: 0.5rpx solid #c6c6c6;
+	border-bottom: 0.5rpx solid #c6c6c6;
+}
+
 .notice-contain .list .item{
 	margin-bottom: 30rpx;
 }
