@@ -1,35 +1,49 @@
-<view class='my'>
-    <view class='top'>
-		<image src="{{avatar ? avatar : '../../resource/images/user-default.png'}}" class='avatar'></image>
-		<view class='name'>{{name}}</view>
+<view class='remind'>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">座位预约</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">空间预约</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">讲座预约</view>
+    </scroll-view>
+
+    <swiper 
+        class="tab-content" 
+        current="{{currentTab}}" 
+        duration="300" 
+        bindchange="switchTab"
+        style="height:{{winHeight}}rpx"
+    >
+        <swiper-item wx:for="{{[0,1,2]}}" wx:key="index">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{list}}" wx:key="index">
+                    <view class="item" bindtap="checkItem" data-id="{{item.id}}">
+                        <view class="label"></view>
+                        <i class="iconfont {{item.isChecked ? 'icon-circle-checked' :'icon-circle'}}"></i>
+                        <view class="item-content">
+                            <view class="title">{{item.title}}</view>
+                            <view class="time">{{item.time}}</view>
+                            <view class="countDown"><i>距离签到：</i>{{item.countDown}}</view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+
+    <view class="footer">
+        <view class="checkAll" bindtap="checkAllItem">
+            <i class="iconfont {{isAllChecked ? 'icon-circle-checked' :'icon-circle'}}"></i>
+            {{isAllChecked ? '取消全选' : '全选'}}
+        </view>
+        <view class="cancel" bindtap="cancelAllItem">一键取消</view>
     </view>
 
-    <view class='itemTitle {{city == true ? "" : "hide"}}' bindtap="onTitleTap" data-name='city'>
-		<i class="iconfont icon-city"></i>同城
-	</view>
-
-    <view hidden="{{!city}}">
-    	<view class='item' bindtap='go' data-type="coupon">
-	    	<i class="iconfont icon-coupon"></i>
-	    	我的优惠券
-    	</view>
-    	<view class='item' bindtap='go' data-type="publish">
-	    	<i class="iconfont icon-publish"></i>
-	    	我的发布
-    	</view>
-    <!--
-    	<view class='item' bindtap='go' data-type="msg">
-    		<i class="iconfont icon-msg-solid"></i>
-	    	我的消息
-    	</view>
-    -->
-    	<view class='item' bindtap='go' data-type="collect">
-    		<i class="iconfont icon-star"></i>
-		    我的收藏
-		</view>
-    	<view class='item' bindtap='go' data-type="moveIn">
-    		<i class="iconfont icon-store"></i>
-	    	我的入驻
-    	</view>
-	</view>
+    <!--弹出框-->
+    <modal 
+        title="是否确定取消"
+        hidden="{{hiddenModal}}"
+        confirm-text="确认"
+        cancel-text="取消"
+        bindconfirm="listenerConfirm"
+        bindcancel="listenerCancel" 
+    ></modal>
 </view>

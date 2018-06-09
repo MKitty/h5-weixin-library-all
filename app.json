@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    "src/page/home/index/index",
     "src/page/order/remind/index",
+    "src/page/home/index/index",
+    
     "src/page/order/history/index",
     "src/page/user/index/index",
     "src/page/user/msg/index",

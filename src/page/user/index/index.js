@@ -2,7 +2,10 @@
 Page({
     data: {
 		info: {},
-		tagList: ['看书','旅行','唱歌','做甜点']
+		tagList: ['看书','旅行','唱歌','做甜点'],
+        hiddenModal: true,
+        showModalStatus: false,
+        animationData: null
     },
 
     onLoad: function (options) {
@@ -52,7 +55,21 @@ Page({
 
     // 重置密码
 	resetPassword(){
-    	
+    	this.setData({
+            hiddenModal: false
+        })
+    },
+    // 确认重置密码
+    listenerConfirm(){
+        this.setData({
+            hiddenModal: true
+        })
+    },
+    // 取消重置密码
+    listenerCancel(){
+        this.setData({
+            hiddenModal: true
+        })
     },
 
 	// 绑定微信号
@@ -69,15 +86,58 @@ Page({
     	})
     },
 
-	// 退出登录
-    loginOut(){
-    	
-    },
-
 	// 客服
     goToServicer(){
     	wx.navigateTo({
 	        url: `/src/page/user/custormService/index`
     	})
     },
+
+    // 退出登录,显示对话框
+    loginOut: function () {
+        // 显示遮罩层
+        var animation = wx.createAnimation({
+            duration: 200,
+            timingFunction: "linear",
+            delay: 0
+        })
+        this.animation = animation
+        animation.translateY(300).step()
+        this.setData({
+            animationData: animation.export(),
+            showModalStatus: true
+        })
+        setTimeout(function () {
+            animation.translateY(0).step()
+            this.setData({
+                animationData: animation.export()
+            })
+        }.bind(this), 200)
+    },
+
+    //隐藏对话框
+    hideModal: function () {
+        // 隐藏遮罩层
+        var animation = wx.createAnimation({
+            duration: 200,
+            timingFunction: "linear",
+            delay: 0
+        })
+        this.animation = animation
+        animation.translateY(300).step()
+        this.setData({
+            animationData: animation.export(),
+        })
+        setTimeout(function () {
+            animation.translateY(0).step()
+            this.setData({
+                animationData: animation.export(),
+                showModalStatus: false
+            })
+        }.bind(this), 200)
+    }, 
+
+    loginOutConfirm(){
+        this.hideModal()
+    }
 })

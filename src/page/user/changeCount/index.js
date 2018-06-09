@@ -1,24 +1,16 @@
 // import { getUserInfo } from '../../resource/utils/comment.js'
 Page({
     data: {
-		noticeList: []
+		info: {}
     },
 
     onLoad: function (options) {
 		this.setData({
-			noticeList:[{
-				id: 1,
-				title: "暂停开放通知",
-				content: '2018年5月18日，图书馆一楼会议室在上午08:00-12:00，暂停对外开放，请各位注......',
-				day: 16,
-				month: 2018.05
-			},{
-				id: 1,
-				title: "暂停开放通知",
-				content: '2018年5月18日，图书馆一楼会议室在上午08:00-12:00，暂停对外开放，请各位注......',
-				day: 16,
-				month: 2018.05
-			}]
+			info: {
+				headImg: 'http://xxb.xuexunbao.com.cn/201806062227018863cfc5b771da58f0ae5acd19064476b22.jpg',
+				name: '许刚',
+				phone: 13797071376
+			}
 		})
     }
 })

@@ -29,10 +29,10 @@ page{
 	display: flex;
 	right: 30rpx;
 	font-size: 12pt;
+	color: #3d667a;
 }
 .swiper-btn .iconfont{
 	font-size: 18pt;
-	color: rgba(0,0,0,0.5);
 	vertical-align: -7%;
 	margin-right: 3rpx;
 }

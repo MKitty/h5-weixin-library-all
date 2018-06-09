@@ -75,4 +75,25 @@
         </view>
     </view>
     
+    <!--弹出框-->
+    <modal 
+        title="恢复初始密码"
+        hidden="{{hiddenModal}}"
+        confirm-text="确认"
+        cancel-text="取消"
+        bindconfirm="listenerConfirm"
+        bindcancel="listenerCancel" 
+    ></modal>
+
+    <!--屏幕背景变暗的背景  -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!--弹出框  -->
+    <view 
+        animation="{{animationData}}" 
+        class="commodity_attr_box" 
+        wx:if="{{showModalStatus}}"
+    >
+        <view class="confrimLogout item" bindtap="loginOutConfirm">退出登录</view>
+        <view class="cancelLogout item" bindtap="hideModal">取消</view>
+    </view>
 </view>

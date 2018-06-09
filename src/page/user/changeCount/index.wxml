@@ -1,3 +1,19 @@
-<view class='noticeList'>
-    <view>切换账号</view>
+<!--index.wxml-->
+<view class="changeCount">
+    <image 
+        src="../../../resource/images/bind.jpg" class="topImg" 
+        mode="aspectFill"
+    /> 
+
+    <view class="content">
+    	<image 
+	        src="{{info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}" class="headImg" 
+	        mode="aspectFill"
+	    /> 
+
+	    <view class="name">{{info.name}}</view>
+	    <view class="phone">{{info.phone}}</view>
+    </view>
+
+    <view class="btn">切换账号</view>
 </view>

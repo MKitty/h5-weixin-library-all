@@ -21,7 +21,7 @@
     	    </swiper>
             <view class="swiper-btn">
                 <view class="scan-box" bindtap="scanCode">
-                    <i class="iconfont icon-scanqcord"></i>扫一扫
+                    <i class="iconfont icon-scan"></i>扫一扫
                 </view>
             </view>
         </view>
@@ -29,7 +29,7 @@
         <view class="order-link-contain">
             <view class="space item">
                 <image 
-                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    src='../../../resource/images/space.png' class="slide-image image_pic" 
                     mode="aspectFill"
                     class="img"
                 />
@@ -37,7 +37,7 @@
             </view>
             <view class="seat item">
                 <image 
-                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    src='../../../resource/images/seat.png' class="slide-image image_pic" 
                     mode="aspectFill"
                     class="img"
                 />
@@ -45,7 +45,7 @@
             </view>
             <view class="lecture item">
                 <image 
-                    src='https://m.360buyimg.com/babel/jfs/t20695/118/711678007/159042/81b387b2/5b157234Na31baa10.png' class="slide-image image_pic" 
+                    src='../../../resource/images/jiangzuo.png' class="slide-image image_pic" 
                     mode="aspectFill"
                     class="img"
                 />
