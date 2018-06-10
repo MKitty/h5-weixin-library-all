@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="changePassword">
+    <image 
+        src="../../../resource/images/change_password.jpg" class="topImg" 
+        mode="aspectFill"
+    /> 
+
+    <view class="list">
+    	<view class="item">
+    		<i class="iconfont icon-headimg"></i>
+    		<input type="text" placeholder="请输入账号名" placeholder-style="font-size:26rpx"  bindinput="listenerCountInput" class="input" />
+    	</view>
+
+    	<view class="item">
+    		<i class="iconfont icon-lock2"></i>
+    		<input type="text" placeholder="请输入验证码" placeholder-style="font-size:26rpx"  bindinput="listenerCodeInput" class="input" />
+            <view class="code">获取验证码</view>
+    	</view>
+    </view>
+
+    <view class="btn" bindtap="reset">重置密码</view>
+</view>

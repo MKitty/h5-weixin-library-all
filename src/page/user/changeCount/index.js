@@ -12,5 +12,11 @@ Page({
 				phone: 13797071376
 			}
 		})
-    }
+    },
+
+    change(){
+    	wx.redirectTo({
+	        url: "/src/page/home/login/index"
+    	})
+    }  
 })

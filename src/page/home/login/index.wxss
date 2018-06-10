@@ -29,14 +29,23 @@ page{
 	line-height: 100rpx;
 	display: flex;
 	border-bottom: .5rpx solid #3d667a;
+	position: relative;
 }
-
+.picker{
+	flex: 1;
+}
 .item .iconfont{
 	font-size: 42rpx;
 	margin-right: 20rpx;
 	vertical-align: 1%;
 }
-
+.item .icon-triangle{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0;
+}
 .item input{
 	height: 100%;
 }

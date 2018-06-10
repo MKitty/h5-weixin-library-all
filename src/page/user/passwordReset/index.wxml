@@ -22,5 +22,5 @@
     	</view>
     </view>
 
-    <view class="btn">确认修改</view>
+    <view class="btn" bindtap="confirm">确认修改</view>
 </view>

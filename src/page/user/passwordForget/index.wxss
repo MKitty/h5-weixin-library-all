@@ -1,0 +1,57 @@
+page{
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	color: #3d667a;
+}
+.topImg{
+	width: 100%;
+	height: 168rpx;
+}
+
+.list{
+	padding: 0 24rpx;
+	margin-top: 100rpx;
+}
+
+.item{
+	height: 60rpx;
+	line-height: 60rpx;
+	display: flex;
+	border-bottom: .5rpx solid #3d667a;
+	margin-bottom: 40rpx;
+	position: relative;
+}
+
+.item .iconfont{
+	font-size: 34rpx;
+	margin-right: 26rpx;
+	vertical-align: 1%;
+}
+
+.item input{
+	height: 100%;
+}
+
+.btn{
+	height: 66rpx;
+	line-height: 66rpx;
+	font-size: 24rpx;
+	text-align: center;
+	border: solid 1px rgba(61, 102, 122, 0.46);
+	width: 330rpx;
+	margin: 19rpx auto 0;
+}
+.code{
+	position: absolute;
+	right: 0;
+	bottom: 10rpx;
+	width: 165rpx;
+	height: 66rpx;
+	line-height: 66rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #3d667a;
+	border: solid 1px rgba(61, 102, 122, 0.46);
+}

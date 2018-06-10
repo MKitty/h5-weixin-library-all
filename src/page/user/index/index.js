@@ -55,7 +55,7 @@ Page({
 	// 修改密码
     changePassword(){
     	wx.navigateTo({
-	        url: `/src/page/user/password/index`
+	        url: `/src/page/user/passwordReset/index`
     	})
     },
 
@@ -144,6 +144,9 @@ Page({
     }, 
 
     loginOutConfirm(){
+        wx.redirectTo({
+            url: "/src/page/home/login/index"
+        })
         this.hideModal()
     }
 })

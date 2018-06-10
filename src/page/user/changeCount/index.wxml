@@ -15,5 +15,5 @@
 	    <view class="phone">{{info.phone}}</view>
     </view>
 
-    <view class="btn">切换账号</view>
+    <view class="btn" bindtap="change">切换账号</view>
 </view>

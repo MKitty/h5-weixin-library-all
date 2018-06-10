@@ -1,12 +1,14 @@
 {
   "pages": [
-    
+
+    "src/page/home/login/index",
     "src/page/home/index/index",
     "src/page/order/remind/index",
     "src/page/order/index/index",
     "src/page/user/index/index",
     "src/page/user/msg/index",
-    "src/page/user/custormService/index",
+    "src/page/user/service/index",
+    "src/page/user/serviceOnline/index",
     "src/page/user/noticeList/index",
     "src/page/user/noticeDetail/index",
     "src/page/user/auth/index",
@@ -14,11 +16,12 @@
     "src/page/user/qrcode/index",
     "src/page/user/bindWechat/index",
     "src/page/user/changeCount/index",
-    "src/page/user/password/index",
+    "src/page/user/passwordReset/index",
+    "src/page/user/passwordForget/index",
     "src/page/order/create/index",
     "src/page/order/listCurrent/index",
-    "src/page/order/list/index",
-    "src/page/home/login/index"
+    "src/page/order/list/index"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
