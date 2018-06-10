@@ -1,3 +1,73 @@
 page{
-    background-color: #f7f7f7;
+    background-color: #fff;
+}
+.userMsg{
+	padding: 0 24rpx;
+	border-top: 0.5rpx solid #3d667a;
+	font-size: 24rpx;
+}
+.setting{
+	background: #fcd667;
+	border-radius: 10rpx;
+	padding: 35rpx 0 5rpx 0;
+	color: #0f0f0f;
+}
+.msg{
+	background: #4e88a5;
+	border-radius: 10rpx;
+	padding: 28rpx 0 5rpx 0;
+	color: #fff;
+}
+.title{
+	height: 82rpx;
+	line-height: 82rpx;
+	position: relative;
+	padding-left: 25rpx;
+}
+.title:before{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	content: '';
+	width: 5rpx;
+	height: 38rpx;
+	display: inline-block;
+	background-color: #fcd667;
+	transform: translateY(-50%);
+}
+
+.msg-contain .title:before{
+	background-color: #4e88a5;
+}
+
+.item{
+	padding: 0 32rpx 0 27rpx;
+	display: flex;
+	position: relative;
+	margin-bottom: 20rpx;
+}
+
+.item-setting{
+	height: 96rpx;
+	line-height: 96rpx;
+}
+.item-tags{
+	margin-top: 17rpx;
+	height: 61rpx;
+	line-height: 61rpx;
+}
+.label{
+	width: 118rpx;
+}
+.img-box{
+	flex: 1;
+}
+.img{
+	width: 96rpx;
+	height: 96rpx;
+	border-radius: 50%;
+}
+.iconfont{
+	font-size: 28rpx;
+	color: #fff;
 }

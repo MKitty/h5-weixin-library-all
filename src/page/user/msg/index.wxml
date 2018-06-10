@@ -1,15 +1,46 @@
 <view class='userMsg'>
-    <view class="item-contain">
-    	<view class="item-title">个性设置</view>
-    	<view class="item-box">
-    		<view class="item">
+    <view class="setting-contain">
+    	<view class="title">个性设置</view>
+    	<view class="setting">
+    		<view class="item item-setting">
     			<view class="label">头像</view>
-    			<image 
-                    src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}"
-                    mode="aspectFill"
-                /> 
+    			<view class="img-box">
+    				<image 
+	                    src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}"
+	                    mode="aspectFill"
+	                    class="img"
+	                /> 
+    			</view>
+    			
                 <div class="iconfont icon-right"></div>
     		</view>
+    		<view class="item item-setting">
+    			<view class="label">背景墙</view>
+    			<view class="img-box">
+	    			<image 
+	                    src="{{ info.bgImg ? info.bgImg : '../../../resource/images/user-default.png'}}"
+	                    mode="aspectFill"
+	                    class="img"
+	                /> 
+                </view>
+                <div class="iconfont icon-right"></div>
+    		</view>
+    		<view class="item item-tags">
+    			<view class="label">标签</view>
+    			<view class="img-box">{{info.tags}}</view>
+                <div class="iconfont icon-right"></div>
+    		</view>
+    	</view>
+    </view>
+    <view class="msg-contain">
+    	<view class="title">基本信息</view>
+    	<view class="msg">
+    		<view class="item item-msg">姓名：{{info.name}}</view>
+    		<view class="item item-msg">账号：{{info.account}}</view>
+    		<view class="item item-msg">学号：{{info.studentId}}</view>
+    		<view class="item item-msg">年级：{{info.grade}}</view>
+    		<view class="item item-msg">学院：{{info.college}}</view>
+    		<view class="item item-msg">专业：{{info.major}}</view>
     	</view>
     </view>
 </view>

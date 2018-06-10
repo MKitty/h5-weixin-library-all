@@ -23,7 +23,7 @@ page{
 	margin-bottom: 40rpx;
 }
 
-.item:nth-child(2){
+.item:last-child{
 	border-bottom: none;
 }
 .item .iconfont{
@@ -41,5 +41,7 @@ page{
 	line-height: 66rpx;
 	font-size: 24rpx;
 	text-align: center;
-	margin-top: 19rpx;
+	border: solid 1px rgba(61, 102, 122, 0.46);
+	width: 330rpx;
+	margin: 19rpx auto 0;
 }

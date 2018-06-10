@@ -14,7 +14,10 @@ Page({
 	onLoad: function(){
 		
 	},
-
+	
+	forgetPassword(){
+		
+	}
 	
 
 })

@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="changeCount">
     <image 
-        src="../../../resource/images/bind.jpg" class="topImg" 
+        src="../../../resource/images/changeCount.jpg" class="topImg" 
         mode="aspectFill"
     /> 
 

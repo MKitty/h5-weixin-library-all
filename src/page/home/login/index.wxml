@@ -1,193 +1,32 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="container-home" style="{{showClassify?'height:100%;overflow:hidden':''}}">
-        <view class="swiper-contain">
-        	<swiper 
-        		wx:if="{{!showClassify}}" 
-        		class="swiper" 
-        		indicator-dots="true" 
-        		autoplay="true" 
-        		interval="3000" 
-        		duration="1000"
-    		>    
-    	        <block wx:for="{{advs}}" wx:key="unique">    
-    		        <swiper-item>    
-    		            <image 
-                            src="{{ item.thumb ? imagesSocket+'/'+item.thumb : '../../resource/images/logo-default.png'}}" class="slide-image image_pic" 
-                            mode="aspectFill"
-                            data-id="{{item.link}}"
-                            bindtap="tap"
-                        /> 
-    		        </swiper-item>    
-    	        </block> 
-    	    </swiper>
-    	    <view wx:if="{{!showClassify}}" class="swiper-btn">
-            	<navigator url="../search/index/index" class="search-box">
-    	        	<i class="iconfont icon-search2"></i>
-    	        </navigator>
-    	        <view class="scan-box" bindtap="scanCode">
-    	        	<i class="iconfont icon-scanqcord"></i>
-    	        </view>
-            </view>
-            <view wx:if="{{!showClassify}}" class="adress-btn" bindtap="chooseTown">
-                <i class="iconfont icon-adress"></i>{{townName}}
-            </view>
+    <image 
+        src="../../../resource/images/login-top.jpg" class="topImg" 
+        mode="aspectFill"
+    /> 
+
+    <view class="list">
+        <view class="item">
+            <view class="label">选择学校：</view>
+            <input type="text" placeholder="请选择学校" placeholder-style="font-size:28rpx"  bindinput="listenerPasswordAgainInput" class="input" />
         </view>
 
-        <view class="hotClassify-list">
-            <view 
-                class="hotClassify-item" 
-                wx:for="{{hotClassifyList}}" 
-                wx:key="{{index}}" 
-                bindtap = "goToSearchList"
-                data-key = '{{item.cate_name}}'
-                data-type = 'shop'
-                data-id = '{{item.cate_id}}'
-            >
-                <image
-                    class="pic"
-                    src="{{item.thumb ? imagesSocket+'/'+item.thumb : '../../resource/images/logo-default.png'}}"
-                    background-size="cover"
-                ></image>
-                <view class="text">{{item.cate_name}}</view>
-            </view>
+        <view class="item">
+            <i class="iconfont icon-headimg"></i>
+            <input type="text" placeholder="请输入账号" placeholder-style="font-size:26rpx"  bindinput="listenerCountInput" class="input" />
         </view>
 
-       <!-- 
-            <view wx:if="{{!showClassify}}" class="advert-box">
-                <navigator class="advert-item" url="../advs/index">
-                    <image
-                        class="pic"
-                        src="{{'../../resource/images/adv1.png'}}"
-                        background-size="cover"
-                    ></image>
-                </navigator>
-                <navigator class="advert-item" url="../advs/index">
-                    <image
-                        class="pic"
-                        src="{{'../../resource/images/adv2.png'}}"
-                        background-size="cover"
-                    ></image>
-                </navigator>
-            </view>
-        -->
-	    <view wx:if="{{!showClassify}}" class="shop-box bg_white">
-	    	<view class="title-box">
-	    		<view class="title">推荐店铺</view>
-	    		<navigator url="../moveIn/create/index" class="btn">免费入驻</navigator>
-	    	</view>
-	    	<scroll-view class="shopList" scroll-x='true'>
-	        	<view class="shop-item"  wx:for="{{hotshop}}" wx:key="unique" data-id="{{item.shop_id}}" 
-                    bindtap='tap'>
-                	<image class="pic image_pic" src="{{item.logo ? item.logo : '../../resource/images/logo-default.png'}}" mode="aspectFill"/> 
-                	<view class="shop-item-text">{{item.shop_name}}</view>
-	            </view>
-		    </scroll-view>
-	    </view>
-
-	    <view wx:if="{{!showClassify}}" class="bg_line"></view>
-	    <view wx:if="{{showClassify}}" class="classicfy-box bg_white" bindtap="closeClassify" catchtouchmove="preventD">
-	    	<view class="home-list-top bg_white">
-		    	<scroll-view scroll-x='true' class="type-box">
-		    		<view class="type-item" wx:for="{{cate}}" wx:key="{{index}}">{{item.cate_name}}</view>
-		    	</scroll-view>
-		    	<view class="btn" bindtap="showAllClassify">
-	    			<i wx:if="{{!showClassify}}" class="iconfont icon-down-solid"></i>
-	    			<i wx:if="{{showClassify}}" class="iconfont icon-up-solid"></i>
-	    		</view>
-    		</view>
-    		<view class="classicfy">
-    			<view class="classicfy-item" wx:for="{{cate}}" wx:key="{{index}}">
-    				<view 
-                        class="iconbox"
-                        data-id='{{item.cate_id}}' 
-                        data-index='{{index}}' 
-                        data-item='{{item}}' 
-                        data-type='0' 
-                        bindtap='scrollTap'
-                    >
-    					<image
-                            class="cate-img image_pic"
-                            src="{{item.thumb ? imagesSocket+'/'+item.thumb : '../../resource/images/logo-default.png'}}"
-                            background-size="cover"
-                        ></image>
-    				</view>
-    				<view class="classicfy-item-text">{{item.cate_name}}</view>
-    			</view>
-    		</view>
-	    </view>
-	    <view class="homeListBox bg_white" style="{{showClassify?'margin-top:620rpx':''}}">
-	    	<view wx:if="{{!showClassify}}" class="home-list-top">
-		    	<scroll-view scroll-x='true' class="type-box">
-		    		<view 
-                        class="type-item {{currentIndex == index ? 'type-item-active' : ''}}" 
-                        wx:for="{{cateScroll}}" 
-                        wx:key="{{index}}" 
-                        data-id='{{item.cate_id}}' 
-                        data-index='{{index}}' 
-                        data-item='{{item}}' 
-                        data-type='1' 
-                        bindtap='scrollTap'
-                    >
-                        {{item.cate_name}}
-                    </view>
-		    	</scroll-view>
-		    	<view class="btn" bindtap="showAllClassify">
-	    			<i wx:if="{{!showClassify}}" class="iconfont icon-down-solid"></i>
-	    			<i wx:if="{{showClassify}}" class="iconfont icon-up-solid"></i>
-	    		</view>
-    		</view>
-            <view class="sort-box">
-                <view 
-                    class="sort-item {{sortCurrent == item.type ? 'curentSort' : ''}}" 
-                    wx:for="{{sortTypes}}" 
-                    wx:key="{{index}}"
-                    data-type="{{item.type}}"
-                    bindtap='sortTap'
-                >{{item.name}}</view>
-            </view>
-	    	<view class="home-list">
-	    		<view 
-                    class="home-list-item" 
-                    wx:for="{{shopList}}" 
-                    wx:key="{{index}}" 
-                    data-id="{{item.shop_id}}" 
-                    bindtap='tap'
-                >
-	    			<view class="pic">
-	    				<image 
-                            src="{{item.logo ? item.logo : '../../resource/images/logo-default.png'}}" 
-                            class='pic-avatar image_pic'
-                            mode="aspectFill"
-                        ></image>
-	    			</view>
-	    			<view class="desc">
-	    				<view class="title">
-	    					<view class="name">{{item.shop_name}}</view>
-	    					<view class="distance">{{item.distance}}km</view>
-	    				</view>
-	    				<view class="score-box">
-	    					<view class="score-list">
-                                <view class="score-item" wx:for="{{item.score_solid}}" wx:key="{{index}}">
-                                    <i class="iconfont icon-star2"></i>
-                                </view>
-                                <view class="score-item" wx:for="{{item.score_solid_half}}" wx:key="{{index}}">
-                                    <i class="iconfont icon-star1"></i>
-                                </view>
-                                <view class="score-item" wx:for="{{item.score_solid_none}}" wx:key="{{index}}">
-                                    <i class="iconfont icon-star0"></i>
-                                </view>
-	    					</view>
-	    					<view class="score-text">{{item.dp}}</view>
-	    				</view>
-	    				<view class="tabs">
-	    					<view class="tab-itam" wx:for="{{item.inco}}" wx:key="{{index}}" wx:for-item="i">{{i}}</view>
-	    				</view>
-	    			</view>
-	    		</view>
-	    		<import src="../../resource/template/complete.wxml" />
-  				<template is="complete" wx:if="{{isComplete}}"/>
-	    	</view>
-	    </view>
+        <view class="item">
+            <i class="iconfont icon-lock2"></i>
+            <input type="text" placeholder="请输入密码" placeholder-style="font-size:26rpx"  bindinput="listenerPasswordInput" class="input" />
+        </view>
     </view>
+    <view class="forget" bindtap="forgetPassword">忘记密码？</view>
+    <view class="btn">登录</view>
+
+    <image 
+        src="../../../resource/images/login_bottom.jpg" class="bottomImg" 
+        mode="aspectFill"
+    /> 
+
 </view>
