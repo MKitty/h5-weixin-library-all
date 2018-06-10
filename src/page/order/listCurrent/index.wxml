@@ -8,7 +8,7 @@
     	<view class="item" wx:for="{{list}}" wx:key="{{index}}">
     		<view class="item-title">
     			<view class="item-title-type {{ item.type == 1 ? 'item-title-type1' : ''}} {{ item.type == 0 ? 'item-title-type0' : ''}} {{ item.type == 2 ? 'item-title-type2' : ''}}">{{['空间预约','座位预约','讲座预约'][item.type]}}</view>
-    			<view class="item-title-countDown" wx:if="{{type == 1}}">
+    			<view class="item-title-countDown">
     				距签离<i class="{{ item.type == 1 ? 'item-title-type1' : ''}} {{ item.type == 0 ? 'item-title-type0' : ''}} {{ item.type == 2 ? 'item-title-type2' : ''}}">20</i><i class="{{ item.type == 1 ? 'item-title-type1' : ''}} {{ item.type == 0 ? 'item-title-type0' : ''}} {{ item.type == 2 ? 'item-title-type2' : ''}}">50</i><i class="{{ item.type == 1 ? 'item-title-type1' : ''}} {{ item.type == 0 ? 'item-title-type0' : ''}} {{ item.type == 2 ? 'item-title-type2' : ''}}">45</i>
     			</view>
     		</view>
@@ -17,28 +17,27 @@
     			<view class="content-item">预约位置：{{item.address}}</view>
     			<view class="content-item">预约时间：{{item.time}}</view>
     			<view class="content-item">预约编号：{{item.number}}</view>
-    			<view class="content-item">预约状态：<i>{{['已完成','取消预约成功','已违规'][item.status]}}</i></view>
-                <view class="content-item" wx:if="{{item.status == 2}}">预约原因：<i class="reason">{{item.reason}}</i></view>
+    			<view class="content-item">预约状态：<i>{{['预约成功','签到成功','取消预约成功','被动暂离','签离成功'][item.status]}}</i></view>
     		</view>
-            
-            <view class="btn-contain" wx:if="{{type == 1}}">
-        		<view class="btn" wx:if="{{item.status == 0}}">
-        			<view class="btn-item">签到</view>
-        			<view class="btn-item">取消预约</view>
-        		</view>
-        		<view class="btn" wx:if="{{item.status == 1}}">
-        			<view class="btn-item btn-item2">签离</view>
-        		</view>
-        		<view class="btn" wx:if="{{item.status == 2}}">
-        			<view class="btn-item btn-item2 btn-item3">完成</view>
-        		</view>
-        		<view class="btn" wx:if="{{item.status == 3}}">
-        			<view class="btn-item">签到</view>
-        			<view class="btn-item">签离</view>
-        		</view>
-        		<view class="btn" wx:if="{{item.status == 4}}">
-        			<view class="btn-item btn-item2 btn-item3">完成</view>
-        		</view>
+
+    		<view class="btn-contain" wx:if="{{type == 1}}">
+                <view class="btn" wx:if="{{item.status == 0}}">
+                    <view class="btn-item">签到</view>
+                    <view class="btn-item">取消预约</view>
+                </view>
+                <view class="btn" wx:if="{{item.status == 1}}">
+                    <view class="btn-item btn-item2">签离</view>
+                </view>
+                <view class="btn" wx:if="{{item.status == 2}}">
+                    <view class="btn-item btn-item2 btn-item3">完成</view>
+                </view>
+                <view class="btn" wx:if="{{item.status == 3}}">
+                    <view class="btn-item">签到</view>
+                    <view class="btn-item">签离</view>
+                </view>
+                <view class="btn" wx:if="{{item.status == 4}}">
+                    <view class="btn-item btn-item2 btn-item3">完成</view>
+                </view>
             </view>
     	</view>
     </view>

@@ -1,3 +1,15 @@
-<view class='my'>
-    <view>个人资料</view>
+<view class='userMsg'>
+    <view class="item-contain">
+    	<view class="item-title">个性设置</view>
+    	<view class="item-box">
+    		<view class="item">
+    			<view class="label">头像</view>
+    			<image 
+                    src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}"
+                    mode="aspectFill"
+                /> 
+                <div class="iconfont icon-right"></div>
+    		</view>
+    	</view>
+    </view>
 </view>

@@ -103,11 +103,7 @@ page{
 	color: #4b4b4b;
 }
 
-.content-item .reason{
-	color: #dc2121;
-}
-
-.content-item i{
+.content-item:last-child i{
 	color: #e0c788;
 }
 

@@ -1,7 +1,7 @@
 <view class='my'>
     <!-- 顶部 -->
     <view class="top">
-        <view class="user">
+        <view class="user" bindtap="setUserMsg">
             <image 
                 src="{{ info.headImg ? info.headImg : '../../../resource/images/user-default.png'}}" class="headImg" 
                 mode="aspectFill"

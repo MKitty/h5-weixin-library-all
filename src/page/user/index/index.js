@@ -18,6 +18,12 @@ Page({
 		})
     },
 
+    setUserMsg(){
+        wx.navigateTo({
+            url: "/src/page/user/msg/index"
+        })
+    },
+
 	// 我的学币
     goToMyMoney(){
     	wx.navigateTo({
