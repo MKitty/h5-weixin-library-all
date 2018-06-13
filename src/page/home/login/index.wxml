@@ -18,7 +18,7 @@
 
         <view class="item">
             <i class="iconfont icon-headimg"></i>
-            <input type="text" placeholder="请输入账号" placeholder-style="font-size:26rpx"  bindinput="listenerCountInput" class="input" />
+            <input type="text" placeholder="请输入账号" placeholder-style="font-size:26rpx"  bindinput="listenerUserNameInput" class="input" />
         </view>
 
         <view class="item">

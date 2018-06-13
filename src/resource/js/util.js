@@ -764,4 +764,16 @@ util.date = function(){
 	}
 };
 
+
+util.jsonToObject = function(value){
+	console.log('value:',value)
+	let jsonStr = value, obj = {};
+    jsonStr = jsonStr.replace(" ","");
+    if(typeof jsonStr!= 'object'){
+        jsonStr= jsonStr.replace(/\ufeff/g,"");   //重点
+        obj = JSON.parse(jsonStr);
+        return obj
+    }
+};
+
 module.exports = util;

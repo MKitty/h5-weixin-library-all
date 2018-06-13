@@ -17,6 +17,7 @@ App({
                     // 如复制手机端链接https://yun.0418it.com/app/index.php?i=43&c=entry&do=index&m=yc_youliao ,
                     // 那么43就是要同步公众号的id
 	util: require('src/resource/js/util.js'),
+	url: 'wss://tang.eternalstop.com/wss',
 	siteInfo : {
 		"name": "",
 		"uniacid": "2",

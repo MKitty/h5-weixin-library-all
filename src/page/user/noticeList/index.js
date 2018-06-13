@@ -1,4 +1,5 @@
 // import { getUserInfo } from '../../resource/utils/comment.js'
+let app = getApp();
 Page({
     data: {
 		noticeList: []
@@ -20,6 +21,60 @@ Page({
 				month: 2018.05
 			}]
 		})
+
+
+
+		var socketOpen = false
+        var socketMsgQueue = []
+        let data = {
+            flag: 1002,
+            code: 'd4a54d',
+            start: 1,
+            end: 5
+        }
+
+        //建立连接
+        wx.connectSocket({
+          url: app.url
+        })
+
+		//连接成功
+        wx.onSocketOpen((res) => {
+            socketOpen = true
+            sendSocketMessage(data)
+            socketMsgQueue = []
+        })
+
+        const sendSocketMessage = (msg)=> {
+            if (socketOpen) {
+	            wx.sendSocketMessage({
+	              data:JSON.stringify(msg)
+	            })
+            } else {
+            	socketMsgQueue.push(msg)
+            }
+        }
+
+		//接收数据
+        wx.onSocketMessage((res) => {
+            let _this = this
+            if(res && res.data){
+                var jsonStr= res.data;
+                jsonStr = jsonStr.replace(" ","");
+                if(typeof jsonStr!= 'object'){
+                    jsonStr= jsonStr.replace(/\ufeff/g,"");    //重点
+                    var obj = JSON.parse(jsonStr);
+                    
+                    
+                    console.log('收到服务器内容：:',obj)
+                }
+            }
+        })
+
+        //连接失败
+	    wx.onSocketError(() => {
+	        console.log('websocket连接失败！');
+	    })
     },
 
     goToDetail(e){
