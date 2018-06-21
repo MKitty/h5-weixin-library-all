@@ -27,7 +27,7 @@
         </view>
     </view>
     <view class="forget" bindtap="forgetPassword">忘记密码？</view>
-    <view class="btn" bindtap="login">登录</view>
+    <view class="btn {{ready ? 'active' : ''}}" bindtap="login">登录</view>
 
     <image 
         src="../../../resource/images/login_bottom.jpg" class="bottomImg" 

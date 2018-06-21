@@ -2,10 +2,16 @@
 let app = getApp();
 Page({
     data: {
-		noticeList: []
+		noticeList: [],
+        code: ''
     },
 
     onLoad: function (options) {
+        let code = wx.getStorageSync('userCode')
+        this.setData({
+            code: code
+        })
+
 		this.setData({
 			noticeList:[{
 				id: 1,
@@ -24,11 +30,11 @@ Page({
 
 
 
-		var socketOpen = false
-        var socketMsgQueue = []
+		// var socketOpen = false
+  //       var socketMsgQueue = []
         let data = {
             flag: 1002,
-            code: 'd4a54d',
+            code: code,
             start: 1,
             end: 5
         }
@@ -38,22 +44,22 @@ Page({
           url: app.url
         })
 
-		//连接成功
-        wx.onSocketOpen((res) => {
-            socketOpen = true
-            sendSocketMessage(data)
-            socketMsgQueue = []
-        })
+		// //连接成功
+  //       wx.onSocketOpen((res) => {
+  //           socketOpen = true
+  //           sendSocketMessage(data)
+  //           socketMsgQueue = []
+  //       })
 
-        const sendSocketMessage = (msg)=> {
-            if (socketOpen) {
+  //       const sendSocketMessage = (msg)=> {
+  //           if (socketOpen) {
 	            wx.sendSocketMessage({
-	              data:JSON.stringify(msg)
+	                data:JSON.stringify(data)
 	            })
-            } else {
-            	socketMsgQueue.push(msg)
-            }
-        }
+            // } else {
+            // 	socketMsgQueue.push(msg)
+            // }
+        // }
 
 		//接收数据
         wx.onSocketMessage((res) => {

@@ -1,6 +1,6 @@
 {
   "pages": [
-
+    
     "src/page/home/login/index",
     "src/page/home/index/index",
     "src/page/order/remind/index",
@@ -18,7 +18,10 @@
     "src/page/user/changeCount/index",
     "src/page/user/passwordReset/index",
     "src/page/user/passwordForget/index",
-    "src/page/order/create/index",
+    "src/page/order/create/seat/index/index",
+    "src/page/order/create/seat/confirm/index",
+    "src/page/order/create/space/index/index",
+    "src/page/order/create/lecture/index/index",
     "src/page/order/listCurrent/index",
     "src/page/order/list/index"
     

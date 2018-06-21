@@ -11,9 +11,9 @@ Page({
     onLoad: function (options) {
 		this.setData({
 			info: {
-				name: '许刚',
+				name: '裴亚楠',
 				count: 13797071376,
-				headImg: 'http://xxb.xuexunbao.com.cn/201806062227018863cfc5b771da58f0ae5acd19064476b22.jpg'
+				headImg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529048134226&di=6de431ebcec3dd10f226c433b1ed0912&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201512%2F10%2F20151210043341_NLBrX.thumb.700_0.jpeg'
 			}
 		})
     },
@@ -95,7 +95,7 @@ Page({
 	// 客服
     goToServicer(){
     	wx.navigateTo({
-	        url: `/src/page/user/custormService/index`
+	        url: `/src/page/user/service/index`
     	})
     },
 

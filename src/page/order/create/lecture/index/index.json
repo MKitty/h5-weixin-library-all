@@ -1,0 +1,8 @@
+{
+	"backgroundTextStyle": "light",
+    "backgroundColor":"#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "讲座预约",
+    "enablePullDownRefresh": false
+}

@@ -27,7 +27,7 @@
         </view>
 
         <view class="order-link-contain">
-            <view class="space item">
+            <view class="space item" bindtap="createOrder" data-name="space">
                 <image 
                     src='../../../resource/images/space.png' class="slide-image image_pic" 
                     mode="aspectFill"
@@ -35,7 +35,7 @@
                 />
                 <view class="text">空间预约</view>
             </view>
-            <view class="seat item">
+            <view class="seat item" bindtap="createOrder" data-name="seat">
                 <image 
                     src='../../../resource/images/seat.png' class="slide-image image_pic" 
                     mode="aspectFill"
@@ -43,7 +43,7 @@
                 />
                 <view class="text">座位预约</view>
             </view>
-            <view class="lecture item">
+            <view class="lecture item" bindtap="createOrder" data-name="lecture">
                 <image 
                     src='../../../resource/images/jiangzuo.png' class="slide-image image_pic" 
                     mode="aspectFill"

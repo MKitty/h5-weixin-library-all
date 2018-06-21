@@ -74,6 +74,22 @@ Page({
 	    })
 	},
 
-	
+	createOrder(e){
+		let name = e.currentTarget.dataset.name, url = '';
+		switch (name) {
+			case 'space':
+				url = "/src/page/order/create/space/index/index"
+				break;
+			case 'seat':
+				url = "/src/page/order/create/seat/index/index"
+				break;
+			case 'lecture':
+				url = "/src/page/order/create/lecture/index/index"
+				break;
+		}
+		wx.navigateTo({
+	        url: url
+    	})
+	}
 
 })

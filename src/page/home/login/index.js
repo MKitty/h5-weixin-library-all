@@ -13,7 +13,8 @@ Page({
         code: '',
         schoolList: [],
         userName: '',
-        password: ''
+        password: '',
+        ready: false
 	},
 	
 	onLoad: function(){
@@ -22,7 +23,7 @@ Page({
         let data = {
             flag: 1
         }
-
+        
         //建立连接
         wx.connectSocket({
           url: app.url
@@ -64,13 +65,14 @@ Page({
                         schoolList: obj.list,
                         code: obj.list[0].code
                     })
-                    console.log('收到服务器内容：:',obj.list)
                 }
             }
         })
 
+
         //连接失败
-	    wx.onSocketError(() => {
+	    wx.onSocketError((e) => {
+            console.log('e:',e)
 	        console.log('websocket连接失败！');
 	    })
 	},
@@ -92,22 +94,34 @@ Page({
 	    	casIndex: e.detail.value,
             code: code
 	    })
-	 
 	},
 
     listenerPasswordInput(e){
         this.setData({
             password: e.detail.value
         })
+        if(this.data.userName && this.data.userName.trim()){
+            this.setData({
+                ready: e.detail.value && e.detail.value.trim().length ? true : false
+            })
+        }
     },
 
     listenerUserNameInput(e){
         this.setData({
             userName: e.detail.value
         })
+        if(this.data.password && this.data.password.trim()){
+            this.setData({
+                ready: e.detail.value && e.detail.value.trim().length ? true : false
+            })
+        }
     },
 
 	login(){
+        wx.switchTab({
+            url: "/src/page/home/index/index",
+        })
         if(!this.data.code){
             wx.showToast({
                 title:'请选择学校',
@@ -131,51 +145,45 @@ Page({
         }
 
         let data = {
-            flag: 1001,
-            code: 't4s5c1a0',
-            userName: 'admin',
-            password: 'test1234'
+            flag: 2,
+            code: this.data.code,
+            UserName: this.data.userName,
+            password: this.data.password
         }
+        
+        // 发送数据
+        wx.sendSocketMessage({
+            data: JSON.stringify(data)
+        })
 
-        let socketOpen = false
-        let socketMsgQueue = []
-
-        //建立连接
-        // wx.connectSocket({
-        //   url: app.url
-        // })
-
-        // //连接成功
-        // wx.onSocketOpen((res) => {
-        //     socketOpen = true
-        //     sendSocketMessage(data)
-        //     socketMsgQueue = []
-        // })
-
-        // const sendSocketMessage = (msg)=> {
-        //     if (socketOpen) {
-                wx.sendSocketMessage({
-                  data:JSON.stringify(data)
-                })
-            // } else {
-            //     socketMsgQueue.push(msg)
-            // }
-        // }
-
-        //接收数据
+        // 接收数据
         wx.onSocketMessage((res) => {
-            if(res){
-                wx.showToast({
-                    title:'登录成功',
-                    icon: 'success',
-                    duration: 2000,
-                    complete: () => {
-                        wx.closeSocket()
-                        wx.switchTab({
-                            url: "/src/page/home/index/index",
+            if(res && res.data){
+                var jsonStr = res.data;
+                jsonStr = jsonStr.replace(" ","");
+                if(typeof jsonStr != 'object'){
+                    jsonStr= jsonStr.replace(/\ufeff/g,"");    //重点
+                    var obj = JSON.parse(jsonStr);
+                    
+                    if(obj.status == 200){
+                        wx.showToast({
+                            title:'登录成功',
+                            icon: 'success',
+                            duration: 2000,
+                            success: () => {
+                                wx.setStorage({
+                                    key:"userCode",
+                                    data: this.data.code
+                                })
+                                setTimeout(()=>{
+                                    wx.switchTab({
+                                        url: "/src/page/home/index/index",
+                                    })
+                                },2000)
+                            }
                         })
                     }
-                })
+                }
             }
         })
 

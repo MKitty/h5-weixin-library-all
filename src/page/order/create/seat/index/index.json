@@ -1,0 +1,8 @@
+{
+	"backgroundTextStyle": "light",
+    "backgroundColor":"#fff",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "座位预约",
+    "enablePullDownRefresh": false
+}

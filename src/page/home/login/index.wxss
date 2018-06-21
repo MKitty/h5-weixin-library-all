@@ -48,6 +48,7 @@ page{
 }
 .item input{
 	height: 100%;
+	width: 100%;
 }
 
 .forget{
@@ -66,5 +67,9 @@ page{
 	margin-top: 58rpx;
 	border: solid 1rpx rgba(224, 199, 136, 0.46);
 	color: #e0c788;
-
+}
+.active{
+	background: #3d667a;
+	color: #fff;
+	border: none;
 }

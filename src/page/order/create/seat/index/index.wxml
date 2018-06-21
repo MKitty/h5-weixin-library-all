@@ -1,0 +1,85 @@
+<view class='createSeatIndex' style="{{showDate?'height:100%;overflow:hidden':''}}">
+    <view class="top-date">
+    	<i class="iconfont icon-left" bindtap="changeMonth" data-type="0"></i>
+    	<view class="top-date-title" bindtap="showDate">
+    		<i class="iconfont icon-date"></i>{{month+'-'+day}}<i class="iconfont {{showDate?'icon-top':'icon-down'}}"></i>
+    	</view>
+    	<i class="iconfont icon-right2" bindtap="changeMonth" data-type="1"></i>
+    </view>
+    
+    <view class="pick-contain">
+    	<view class="floor">
+    		<view class="label">选择楼层：</view>
+    		<view class="pick-result">
+                <picker bindchange="bindFloorPickerChange" value="{{floorIndex}}" range="{{floor}}" class="picker">
+                    <view>
+                        <text>{{floor[floorIndex]}}</text>
+                    </view>
+                </picker>
+                <i class="iconfont icon-down"></i>
+            </view>
+    	</view>
+    	<view class="room">
+    		<view class="label">选择房间：</view>
+    		<view class="pick-result">
+                <picker bindchange="bindRoomPickerChange" value="{{roomIndex}}" range="{{room}}" class="picker">
+                    <view>
+                        <text>{{room[roomIndex]}}</text>
+                    </view>
+                </picker>
+                <i class="iconfont icon-down"></i>
+            </view>
+    	</view>
+    	<view class="situation">
+    		<view class="label">座位预约情况：</view>
+    		<view class="color-box">
+    			有人<i class="box status0"></i>空闲<i class="box status1"></i>已预约<i class="box status2"></i>
+    		</view>
+    	</view>
+    </view>
+
+    <view class="seat-contain">
+		<view class="item" wx:for="{{tableList}}" wx:key="index">
+			<view class="top">
+				<view 
+					class="top-seat {{'status' + i.status}} seat-item" 
+					wx:for="{{item.arr1}}" 
+					wx:key="uniqe"
+					wx:for-item="i"
+				>{{i.name}}</view>
+			</view>
+			<view class="table">{{item.name}}</view>
+			<view class="bottom">
+				<view 
+					class="bottom-seat {{'status' + j.status}} seat-item" 
+					wx:for="{{item.arr2}}" 
+					wx:for-item="j"
+					wx:key="uniqe"
+				>{{j.name}}</view>
+			</view>
+		</view>
+    </view>
+
+    <!-- 日历弹框 -->
+    <view class="date-mask" wx:if="{{showDate}}" bindtap="closeDateMask" catchtouchmove="preventD">
+        <view class="date-contain">
+            <view class="week-box">
+                <text class="week-item" wx:for="{{weekList}}" wx:key="unique">{{item}}</text>
+            </view>
+            <view class="month">
+                <view class="month-item">
+                    <view 
+                        wx:for="{{currentMonthList}}" 
+                        wx:key="unique" 
+                        class="month-item-box"
+                    >
+                        <view wx:if="{{item && item != ''}}" class="num" bindtap="chooseDay" data-choosed="{{item}}">
+                            <view class="num-item {{item == day ? 'on' : ''}} {{item < day && currentMonth == month ? 'disable' : ''}}">{{item}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
