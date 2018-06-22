@@ -147,6 +147,7 @@ Page({
 				status: 0 
 			}]	
 		}],
+		dates: '',
 		showDate: false,
 		weekList: ['一','二','三','四','五','六','日'],          // 星期池
         dayList: [],                                           // 日期池
@@ -195,7 +196,8 @@ Page({
 			month: month,
 			currentMonth: month,
 			day: day,
-            today: day
+            today: day,
+            dates: year + '-' + month + '-' + day
 		})
         this.fetchMonthData(year, month)                     // 获取本月日历
     },
@@ -363,5 +365,17 @@ Page({
 				this.fetchMonthData()
     		}
     	}
+    },
+
+    bindDateChange: function (e) {
+	    this.setData({
+	        dates: e.detail.value
+	    })
+    },
+
+    confirm(e){
+    	wx.navigateTo({
+	        url: "/src/page/order/create/seat/confirm/index"
+    	})
     }
 })

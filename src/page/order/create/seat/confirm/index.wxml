@@ -1,11 +1,36 @@
-<view class='serverIndex'>
-    <view class="title">热点问题</view>
-    <view class="list">
-    	<view class="item" wx:for="{{list}}" wx:key="{{index}}" data-item='{{item}}'>
-            <view class="item-title-contain">
-            	<view class="item-title">{{item.title}}</view>
-            	<i class="iconfont icon-city"></i>
-            </view>
-        </view>
+<view class='serverConfirm'>
+	<view class="list">
+	    <view class="item">
+	    	<view class="label">预约日期：</view>
+	    	<view class="content">{{date}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择楼层：</view>
+	    	<view class="content">{{floor}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择房间：</view>
+	    	<view class="content">{{room}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">选择座位：</view>
+	    	<view class="content">{{seat}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">预约时间(开始时间)：</view>
+	    	<view class="content">{{startTime}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
+	    <view class="item">
+	    	<view class="label">预约时间(结束时间)：</view>
+	    	<view class="content">{{endTime}}</view>
+	    	<i class="iconfont icon-right"></i>
+	    </view>
     </view>
+    
+    <view class="btn">确认</view>
 </view>

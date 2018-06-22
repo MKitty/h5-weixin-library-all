@@ -1,10 +1,16 @@
 <view class='createSeatIndex' style="{{showDate?'height:100%;overflow:hidden':''}}">
     <view class="top-date">
-    	<i class="iconfont icon-left" bindtap="changeMonth" data-type="0"></i>
-    	<view class="top-date-title" bindtap="showDate">
-    		<i class="iconfont icon-date"></i>{{month+'-'+day}}<i class="iconfont {{showDate?'icon-top':'icon-down'}}"></i>
-    	</view>
-    	<i class="iconfont icon-right2" bindtap="changeMonth" data-type="1"></i>
+        <!-- <i class="iconfont icon-left" bindtap="changeMonth" data-type="0"></i> -->
+        <view class="top-date-title" bindtap="showDate">
+            <i class="iconfont icon-date"></i>
+            <picker mode="date" value="{{date}}" start="2018-06-01" end="2030-06-01" bindchange="bindDateChange"> 
+                <view class="picker">  
+                   {{dates}}  
+                </view>  
+            </picker>  
+            <i class="iconfont {{showDate?'icon-top':'icon-down'}}"></i>
+        </view>
+        <!-- <i class="iconfont icon-right2" bindtap="changeMonth" data-type="1"></i> -->
     </view>
     
     <view class="pick-contain">
@@ -46,6 +52,7 @@
 					wx:for="{{item.arr1}}" 
 					wx:key="uniqe"
 					wx:for-item="i"
+                    bindtap="confirm"
 				>{{i.name}}</view>
 			</view>
 			<view class="table">{{item.name}}</view>
@@ -55,13 +62,14 @@
 					wx:for="{{item.arr2}}" 
 					wx:for-item="j"
 					wx:key="uniqe"
+                    bindtap="confirm"
 				>{{j.name}}</view>
 			</view>
 		</view>
     </view>
 
     <!-- 日历弹框 -->
-    <view class="date-mask" wx:if="{{showDate}}" bindtap="closeDateMask" catchtouchmove="preventD">
+    <!-- <view class="date-mask" wx:if="{{showDate}}" bindtap="closeDateMask" catchtouchmove="preventD">
         <view class="date-contain">
             <view class="week-box">
                 <text class="week-item" wx:for="{{weekList}}" wx:key="unique">{{item}}</text>
@@ -80,6 +88,6 @@
                 </view>
             </view>
         </view>
-    </view>
+    </view> -->
 
 </view>

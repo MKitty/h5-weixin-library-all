@@ -2,3 +2,13 @@ page{
     background-color: #f4f4f4
 }
 
+.none{
+	color: #3d667a;
+	font-size: 36rpx;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	text-align: center;
+}

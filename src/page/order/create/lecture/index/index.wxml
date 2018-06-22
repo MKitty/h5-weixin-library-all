@@ -1,11 +1,3 @@
 <view class='serverIndex'>
-    <view class="title">热点问题</view>
-    <view class="list">
-    	<view class="item" wx:for="{{list}}" wx:key="{{index}}" data-item='{{item}}'>
-            <view class="item-title-contain">
-            	<view class="item-title">{{item.title}}</view>
-            	<i class="iconfont icon-city"></i>
-            </view>
-        </view>
-    </view>
+    <view class="none">暂未开通!</view>
 </view>

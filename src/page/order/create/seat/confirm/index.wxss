@@ -2,3 +2,39 @@ page{
     background-color: #f4f4f4
 }
 
+.serverConfirm{
+	border-top: 0.5rpx solid #3d667a;
+}
+.list{
+	background: #fff;
+	padding: 0 28rpx;
+	margin-top: 20rpx;
+}
+.item{
+	display: flex;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-bottom: 0.5rpx solid #dedede;
+	color: #535353;
+	font-size: 30rpx;
+}
+.item:last-child{
+	border-bottom: none;
+}
+.item i{
+	color: #6c6c6c;
+	font-size: 26rpx;
+}
+.content{
+	flex: 1;
+}
+.btn{
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+	width: 94%;
+	margin: 130rpx auto 0;
+	border: solid 1px rgba(61, 102, 122, 0.46);
+	color: #3d667a;
+	font-size: 30rpx;
+}

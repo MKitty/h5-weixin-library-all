@@ -32,6 +32,8 @@ page{
 	flex: 1;
 	font-size: 36rpx;
 	color: #535353;
+	display: flex;
+	justify-content: center;
 }
 .top-date-title .icon-date{
 	font-size: 32rpx;

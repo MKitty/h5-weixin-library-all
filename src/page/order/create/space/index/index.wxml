@@ -1,11 +1,52 @@
-<view class='serverIndex'>
-    <view class="title">热点问题</view>
-    <view class="list">
-    	<view class="item" wx:for="{{list}}" wx:key="{{index}}" data-item='{{item}}'>
-            <view class="item-title-contain">
-            	<view class="item-title">{{item.title}}</view>
-            	<i class="iconfont icon-city"></i>
+<view class='createSeatIndex'>
+    <view class="top-date">
+    	<!-- <i class="iconfont icon-left" bindtap="changeMonth" data-type="0"></i> -->
+    	<view class="top-date-title" bindtap="showDate">
+    		<i class="iconfont icon-date"></i>
+    		<picker mode="date" value="{{date}}" start="2018-06-01" end="2030-06-01" bindchange="bindDateChange"> 
+			    <view class="picker">  
+			       {{dates}}  
+			    </view>  
+			</picker>  
+    		<i class="iconfont {{showDate?'icon-top':'icon-down'}}"></i>
+    	</view>
+    	<!-- <i class="iconfont icon-right2" bindtap="changeMonth" data-type="1"></i> -->
+    </view>
+    
+    <view class="pick-contain">
+    	<view class="floor">
+    		<view class="label">选择楼层：</view>
+    		<view class="pick-result">
+                <picker bindchange="bindFloorPickerChange" value="{{floorIndex}}" range="{{floor}}" class="picker">
+                    <view>
+                        <text>{{floor[floorIndex]}}</text>
+                    </view>
+                </picker>
+                <i class="iconfont icon-down"></i>
             </view>
-        </view>
+    	</view>
+    	
+    	<view class="situation">
+    		<view class="label">空间预约情况：</view>
+    		<view class="color-box">
+    			过期/关闭<i class="box status0"></i>未预约<i class="box status1"></i>已预约<i class="box status2"></i>
+    		</view>
+    	</view>
+    </view>
+
+    <view class="seat-contain">
+		<view class="item" wx:for="{{spaceList}}" wx:key="index">
+			<view class="title"><i>/</i>{{item.name}}<i>/</i></view>
+			<view class="time">
+				<view 
+					class="time-item {{'status' + i.status}}" 
+					wx:for="{{item.timeList}}" 
+					wx:key="uniqe"
+					wx:for-item="i"
+				><view class="time-item-text">{{i.time}}</view>
+			</view>
+			</view>
+			<view class="btn">预约</view>
+		</view>
     </view>
 </view>
